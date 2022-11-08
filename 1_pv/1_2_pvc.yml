@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
-  name: pv-local-one
+  name: pvc-local-one
   namespace: hlf
 spec:
   storageClassName: hostpath

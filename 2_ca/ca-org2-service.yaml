@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: ca-org2
+  namespace: hlf
+  labels:
+    app: ca-org2
+spec:
+  type: ClusterIP
+  selector:
+    app: ca-org2
+  ports:
+    - protocol: TCP
+      targetPort: 8054
+      port: 8054
