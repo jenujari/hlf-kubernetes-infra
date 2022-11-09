@@ -17,3 +17,10 @@ Generate certificates using ca server by creating the job with hyperledger/fabri
 `kubectl apply -f 3_certs`
 
 ---
+Generate genesis block, connection profile and chanel artifacts using fabric tools by creating the job with hyperledger/fabric-tools:2.4 image and running scripts `createGenesis.sh`, `createChannel.sh` from scripts folder in that pod and move final resulting in respective folder with PVC.
+
+ Note : There is issue with hyperledger/fabric-tools:latest tag and docker can't pull fabric-tools image with latest tag so manually 2.4 tag has to be mention for now.
+
+`kubectl apply -f 4_artifacts`
+
+---
