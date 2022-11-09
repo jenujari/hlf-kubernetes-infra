@@ -1,0 +1,11 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../../kube_pv"
+		}
+	],
+  "settings": {}
+}
