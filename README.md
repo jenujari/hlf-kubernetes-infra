@@ -24,3 +24,9 @@ Generate genesis block, connection profile and chanel artifacts using fabric too
 `kubectl apply -f 4_artifacts`
 
 ---
+Create deployments and services for orderer
+
+`kubectl apply -f 5_orderer`
+
+---
+

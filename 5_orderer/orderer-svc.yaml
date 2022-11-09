@@ -1,0 +1,94 @@
+kind: Service
+apiVersion: v1
+metadata:
+    namespace: hlf
+    name: orderer
+    labels:
+        run: orderer
+spec:
+    selector:
+        name: orderer
+    type: ClusterIP
+    ports:
+        - protocol: TCP
+          port: 7050
+          name: grpc
+        - protocol: TCP
+          port: 9443
+          name: metrics
+---
+kind: Service
+apiVersion: v1
+metadata:
+    namespace: hlf
+    name: orderer2
+    labels:
+        run: orderer2
+spec:
+    selector:
+        name: orderer2
+    type: ClusterIP
+    ports:
+        - protocol: TCP
+          port: 7050
+          name: grpc
+        - protocol: TCP
+          port: 9443
+          name: metrics
+---
+kind: Service
+apiVersion: v1
+metadata:
+    namespace: hlf
+    name: orderer3
+    labels:
+        run: orderer3
+spec:
+    selector:
+        name: orderer3
+    type: ClusterIP
+    ports:
+        - protocol: TCP
+          port: 7050
+          name: grpc
+        - protocol: TCP
+          port: 9443
+          name: metrics
+---
+kind: Service
+apiVersion: v1
+metadata:
+    name: orderer4
+    namespace: hlf
+    labels:
+        run: orderer4
+spec:
+    selector:
+        name: orderer4
+    type: ClusterIP
+    ports:
+        - protocol: TCP
+          port: 7050
+          name: grpc
+        - protocol: TCP
+          port: 9443
+          name: metrics
+---
+kind: Service
+apiVersion: v1
+metadata:
+    name: orderer5
+    namespace: hlf
+    labels:
+        run: orderer5
+spec:
+    selector:
+        name: orderer5
+    type: ClusterIP
+    ports:
+        - protocol: TCP
+          port: 7050
+          name: grpc
+        - protocol: TCP
+          port: 9443
+          name: metrics
