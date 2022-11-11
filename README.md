@@ -45,4 +45,26 @@ Create deployments and services for 3 orgs.
 `kubectl apply -f org3`
 
 ---
+log in to the shell of org1-cli pod and run following commands to generate mychannel block from the root dir.
 
+`./scripts/createAppChannel.sh`
+
+it will generate mychannel.block file in to the channel-artifacts folder.
+
+now run following command from all the cli pod to join all three org to mychannel.
+
+`peer channel join -b ./channel-artifacts/mychannel.block`
+
+verify that peer has join channel by running following command from all cli pods.
+
+`peer channel list`
+
+run following command from respective cli pod to update the channel for anchor peer.
+
+`./scripts/updateAnchorPeer.sh Org1MSP`
+
+`./scripts/updateAnchorPeer.sh Org2MSP`
+
+`./scripts/updateAnchorPeer.sh Org3MSP`
+
+---
