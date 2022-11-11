@@ -34,4 +34,15 @@ Create config maps for further use in peer pods.
 `kubectl apply -f 6_configmap`
 
 ---
+Create deployments and services for 3 orgs.
+
+`cd 7_peers`
+
+`kubectl apply -f org1`
+
+`kubectl apply -f org2`
+
+`kubectl apply -f org3`
+
+---
 
