@@ -29,4 +29,9 @@ Create deployments and services for orderer
 `kubectl apply -f 5_orderer`
 
 ---
+Create config maps for further use in peer pods. 
+
+`kubectl apply -f 6_configmap`
+
+---
 
