@@ -1,0 +1,37 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: chaincode-basic-org2
+  namespace: hlf
+  labels:
+    app: chaincode-basic-org2
+spec:
+  selector:
+    matchLabels:
+      app: chaincode-basic-org2
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      namespace: hlf
+      labels:
+        app: chaincode-basic-org2
+    spec:
+      containers:
+        - image: jhon5456/basic-cc-hlf:1.0
+          name: chaincode-basic-org2
+          imagePullPolicy: Always
+          resources:
+                limits:
+                  memory: "250Mi"
+                  cpu: "250m"
+                requests:
+                  memory: "200Mi"
+                  cpu: "150m"
+          env:
+            - name: CHAINCODE_ID
+              value: "basic:ca85e259a933c01457ba258647c739d83d9f3bd95b3f50e7ba76a609686566db"
+            - name: CHAINCODE_SERVER_ADDRESS
+              value: "0.0.0.0:7052"
+          ports:
+            - containerPort: 7052
