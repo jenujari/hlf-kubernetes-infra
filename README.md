@@ -179,3 +179,23 @@ test couch db from local
 visit http://localhost:5984/_utils/ to access couch db in browser.
 
 ---
+
+create docker image for api nodejs express app from api folder.
+
+`docker build -t jhon5456/basic-api-hlf:latest .`
+
+`docker push jhon5456/basic-api-hlf:latest`
+
+now deploy kubernetes deployment for api server with configmaps.
+
+`kubectl apply -f api\k8\configmap.yaml`
+
+`kubectl apply -f api\k8\api.yaml`
+
+port forward for testing api on local.
+
+`kubectl port-forward -n=hlf services/api 4000`
+
+---
+
+
